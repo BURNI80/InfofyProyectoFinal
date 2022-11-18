@@ -1,0 +1,241 @@
+
+/* BARRA1 */
+.generalEstadisticas{
+    border: 3px solid black;
+    background-color: rgb(61, 61, 61);
+    padding-top: 10px;
+}
+.barraG {
+    width: 100%;
+    margin-top: 10px;
+    overflow: hidden;
+    border-radius: 50px;
+    margin-bottom: 20px;
+}
+
+/* OPCIONES BARRA1 */
+.opc1 {
+    background-color: #00D856;
+    width: 50%;
+    text-align: center;
+    height: 50px;
+    font-size: 30px;
+    font-family: SpotyExtra;
+    text-transform: uppercase;
+    color: black;
+}
+.opcI{
+    border-right: 2px solid black;
+}
+.opcD{
+    border-left: 2px solid black;
+}
+.opc1:hover{
+    background-color: rgb(156, 156, 156);
+}
+
+/* BARRA2 */
+.barra2 {
+    list-style-type: none;
+    margin: auto;
+    overflow: hidden;
+    width: 90%;
+    margin-top: -10px;
+}
+
+/* OPCIONES BARRA2 */
+.opcion2 {
+    float: left;
+    height: 100%;
+    width: 33.33%;
+    text-align: center;
+    margin-bottom: -10px;
+}
+.opcion2 p:hover{
+    background-color: rgb(156, 156, 156);
+}
+
+/* OPCIONES BARRA2 P */
+.opcion2 p {
+    float: left;
+    background-color: #00D856;
+    border-radius: 100px;
+    width: 100%;
+    height: 50px;
+    padding-top: 9px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+/* TODAS LAS OPCIONES DE LAS DOS BARRAS */
+.contenidoOpciones {
+    display: block;
+    color: black;
+    font-family: SpotyExtra;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* CONTENIDO */
+.contenido {
+    background-color: white;
+    border-radius: 50px;
+    margin-left: 5%;
+    width: 90%;
+    height: 600px;
+    margin-top: 0px;
+    padding-top: 20px;
+}
+
+/* TABLA */
+.tablaDatos {
+    background-color: green;
+    width: 95%;
+    margin: auto;
+}
+
+/* THEAD */
+/* TH # Y DURACION */
+.thPequeño {
+    width: 8%;
+    text-align: center;
+}
+
+/* P DEL THEAD */
+.tablaDatos thead th p {
+    background-color: purple;
+    border-radius: 50px;
+    width: 90%;
+    margin: auto;
+    height: 40px;
+    padding-top: 8px;
+}
+
+.thNombre {
+    padding-left: 30px;
+}
+
+/* TBODY */
+/* DIV NOMBRE */
+.tablaDatos tbody tr td{
+    background-color: brown;
+    padding-top: 10px;
+}
+.divNombre {
+    background-color: yellow;
+    border-radius: 50px;
+    width: 90%;
+    margin: auto;
+    height: 70px;
+}
+
+/* IMAGEN CANCION */
+.imgCancion {
+    width: 50px;
+    float: left;
+    margin-left: 15px;
+    margin-top: 10px;
+    border-radius: 50px;
+}
+
+.nombreCancion {
+    font-size: 20px;
+}
+
+/* P NOMBRE */
+.tablaDatos tbody tr td div p {
+    width: 85%;
+    margin: 0px;
+    margin-left: 80px;
+    height: 35px;
+    background-color: transparent;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.tdPequeño p {
+    text-align: center;
+    font-size: 20px;
+    padding-top: 18px;
+}
+
+@media (max-width: 768px) {
+    .opc1 {
+        font-size: 15px;
+    }
+    .opcion2 {
+        padding-top: 0px;
+        height: 50px;
+    }
+
+    .opcion2 p {
+        padding-top: 17px;
+        font-size:9px;
+    }
+
+    .contenidoOpciones {
+        margin-bottom: 0px;
+    }
+
+    .tablaDatos thead th p {
+        padding-top: 13px;
+        font-size: 9px;
+    }
+
+    .thNombre {
+        padding-left: 10px;
+    }
+
+    .tablaDatos tbody tr td p {
+        font-family: SpotyLight;
+        margin: 10px;
+        height: 30px;
+        width: 30px;
+    }
+
+    .divNombre {
+        border-radius: 50px;
+        width: 90%;
+        margin: auto;
+        height: 50px;
+    }
+
+    /* IMAGEN CANCION */
+    .imgCancion {
+        width: 40px;
+        margin-left: 5px;
+        margin-top: 5px;
+    }
+
+    .nombreCancion {
+        font-size: 12px;
+        padding-left: 10px;
+        padding-top: 5px;
+    }
+
+    .nombreArtista {
+        font-size: 8px;
+        padding-left: 10px;
+        padding-top: 5px;
+    }
+
+    /* P NOMBRE */
+    .tablaDatos tbody tr td div p {
+        background-color: transparent;
+        width: 85%;
+        margin: 0px;
+        margin-left: 0px;
+        height: 25px;
+        width: 70%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .tdPequeño p {
+        font-size: 10px;
+        padding-top: 7px;
+    }
+}

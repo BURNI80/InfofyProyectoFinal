@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="general">
+        <div className="row mx-lg-5 mx-3 ">
+            <div class="barraG">
+                <ul class="barra">
+                    <li><p class="opcion contenidoOpciones">Artistas</p></li>
+                    <li><p class="opcion contenidoOpciones">Canciones</p></li>
+                </ul>
+            </div>
+            <ul class="barra2">
+                <li class="opcion2 contenidoOpciones">
+                    <p>Siempre</p>
+                </li>
+                <li class="opcion2 contenidoOpciones">
+                    <p>Ultimos 6 Meses</p>
+                </li>
+                <li class="opcion2 contenidoOpciones">
+                    <p>Ultimo Mes</p>
+                </li>
+            </ul>
+        </div>
+        <div class="contenido">
+            <table class="tablaDatos" border="4">
+                <thead>
+                    <th class="thPequeño">
+                        <p>#</p>
+                    </th>
+                    <th>
+                        <p class="thNombre">Nombre</p>
+                    </th>
+                    <th class="thPequeño">
+                        <p>Duracion</p>
+                    </th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="tdPequeño">
+                            <p>10</p>
+                        </td>
+                        <td>
+                            <div class="divNombre">
+                                <img src="./src/assets/images/test.png" alt="" class="imgCancion">
+                                <p class="nombreCancion">
+                                    AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+                                </p>
+                                <p class="nombreArtista">Tus mueAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAArtos</p>
+                            </div>
+                        </td>
+                        <td class="tdPequeño">
+                            <p>23:42</p>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<style>
+    /* GENERAL */
+    .general {
+        background-color: red;
+        width: 100%;
+        height: 1000px;
+    }
+
+    /* BARRA1 */
+    .barra {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        border-radius: 50px;
+        margin-bottom: 20px;
+    }
+
+    /* OPCIONES BARRA1 */
+    .opcion {
+        float: left;
+        background-color: green;
+        width: 50%;
+    }
+
+    /* BARRA2 */
+    .barra2 {
+        list-style-type: none;
+        margin-left: 0;
+        padding: 0;
+        overflow: hidden;
+        width: 100%;
+        margin-top: -10px;
+    }
+
+    /* OPCIONES BARRA2 */
+    .opcion2 {
+        float: left;
+        background-color: yellow;
+        height: 100%;
+        width: 33.33%;
+        text-align: center;
+        margin-bottom: -10px;
+    }
+
+    /* OPCIONES BARRA2 P */
+    .opcion2 p {
+        float: left;
+        background-color: green;
+        border-radius: 100px;
+        width: 100%;
+        height: 50px;
+        padding-top: 9px;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+
+    /* TODAS LAS OPCIONES DE LAS DOS BARRAS */
+    .contenidoOpciones {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    /* CONTENIDO */
+    .contenido {
+        background-color: white;
+        border-radius: 50px;
+        margin-left: 5%;
+        width: 90%;
+        height: 600px;
+        margin-top: 0px;
+        padding-top: 20px;
+    }
+
+    /* TABLA */
+    .tablaDatos {
+        background-color: green;
+        width: 95%;
+        margin: auto;
+    }
+
+    /* THEAD */
+    /* TH # Y DURACION */
+    .thPequeño {
+        width: 8%;
+        text-align: center;
+    }
+
+    /* P DEL THEAD */
+    .tablaDatos thead th p {
+        background-color: purple;
+        border-radius: 50px;
+        width: 90%;
+        margin: auto;
+        height: 40px;
+        padding-top: 8px;
+    }
+
+    .thNombre {
+        padding-left: 30px;
+    }
+
+    /* TBODY */
+    /* TDS */
+    .tablaDatos tbody tr td {
+        background-color: purple;
+        max-width: 100px;
+        overflow: hidden;
+    }
+
+    /* P DEL TBODY */
+    .tablaDatos tbody tr td p {
+        font-family: SpotyLight;
+        background-color: red;
+        margin: 10px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        overflow: hidden;
+        border-radius: 50px;
+        height: 70px;
+    }
+
+    /* DIV NOMBRE */
+    .divNombre {
+        background-color: yellow;
+        border-radius: 50px;
+        width: 90%;
+        margin: auto;
+        height: 70px;
+    }
+
+    /* IMAGEN CANCION */
+    .imgCancion {
+        width: 50px;
+        float: left;
+        margin-left: 15px;
+        margin-top: 10px;
+        border-radius: 50px;
+    }
+
+    .nombreCancion {
+        font-size: 20px;
+    }
+
+    /* P NOMBRE */
+    .tablaDatos tbody tr td div p {
+        width: 85%;
+        margin: 0px;
+        margin-left: 80px;
+        height: 35px;
+        background-color: transparent;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+
+    .tdPequeño p {
+        text-align: center;
+        font-size: 20px;
+        padding-top: 18px;
+    }
+
+    @media (max-width: 768px) {
+        .opcion2 {
+            padding-top: 0px;
+            height: 50px;
+        }
+
+        .opcion2 p {
+            padding-top: 17px;
+            font-size: 10px;
+        }
+
+        .contenidoOpciones {
+            margin-bottom: 0px;
+        }
+
+        .tablaDatos thead th p {
+            padding-top: 13px;
+            font-size: 9px;
+        }
+
+        .thNombre {
+            padding-left: 10px;
+        }
+
+        .tablaDatos tbody tr td p {
+            font-family: SpotyLight;
+            margin: 10px;
+            height: 30px;
+            width: 30px;
+        }
+
+        .divNombre {
+            background-color: yellow;
+            border-radius: 50px;
+            width: 90%;
+            margin: auto;
+            height: 50px;
+        }
+
+        /* IMAGEN CANCION */
+        .imgCancion {
+            width: 40px;
+            margin-left: 5px;
+            margin-top: 5px;
+        }
+
+        .nombreCancion {
+            font-size: 12px;
+            padding-left: 10px;
+            padding-top: 5px;
+
+        }
+
+        .nombreArtista {
+            font-size: 8px;
+            padding-left: 10px;
+            padding-top: 5px;
+        }
+
+        /* P NOMBRE */
+        .tablaDatos tbody tr td div p {
+            background-color: transparent;
+            width: 85%;
+            margin: 0px;
+            margin-left: 0px;
+            height: 25px;
+            width: 70%;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .tdPequeño p {
+            font-size: 10px;
+            padding-top: 7px;
+        }
+    }
+</style>
+
+</html>

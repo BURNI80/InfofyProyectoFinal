@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "SpotyLight";
+  src: url(./assets/fonts/ProximaNova-Light.ttf);
+}
+@font-face {
+  font-family: "SpotyReg";
+  src: url(./assets/fonts/ProximaNova-Regular.ttf);
+}
+@font-face {
+  font-family: "SpotyExtra";
+  src: url(./assets/fonts/ProximaNova-Extrabld.ttf);
+}
+
+html, body {
+    background-color: rgb(36, 36, 36);
+
+  }

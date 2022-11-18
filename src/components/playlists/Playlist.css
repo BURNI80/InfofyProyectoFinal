@@ -1,0 +1,372 @@
+/* GENERAL */
+.general {
+    background-color: rgb(36, 36, 36);
+}
+.playlists {
+    height: 700px;
+}
+
+/* *===========================LISTAS=========================== */
+/* GENERAL LATERAL */
+.datosPlaylist {
+    height: 99.9%;
+    background-color: #3d3d3d;
+    color: white;
+    border-radius: 0px 0px 0px 25px;
+}
+
+/* CONTADOR PLAYLISTS */
+.totalPlaylists {
+    width: 100%;
+    height: 50px;
+    display: table;
+    border: 2px solid black;
+}
+/* TEXTO DEL CONTADOR */
+.numeroListas {
+    height: 100%;
+    padding-left: 10px;
+    font-family: SpotyLight;
+    font-size: 20px;
+    font-weight: 800;
+    display: table-cell;
+    vertical-align: middle;
+}
+/* LISTAS */
+.listas {
+    width: 100%;
+    height: 93%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border: 2px solid black;
+    border-radius: 0px 0px 0px 25px;
+}
+/* BOTONES LISTA */
+.btnPlist {
+    background-color: rgb(61, 61, 61);
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    color: white;
+    border: 2px solid #242424;
+    border-top: 0px solid transparent;
+    border-left: 2px solid #242424;
+    border-right: 2px solid #242424;
+    text-align: left;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-family: SpotyLight;
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/* *===========================CANCIONES=========================== */
+/* GENERAL CANCIONES */
+.canciones {
+    height: 100%;
+    border-radius: 0px 0px 25px 0px;
+}
+/* INFOIRMACION LISTA */
+.infoLista {
+    background-color: #00d856;
+    width: 100%;
+    height: 100px;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+/* IMAGEN LISTA */
+.imgLista {
+    height: 75px;
+    width: 75px;
+    position: absolute;
+    margin-left: 1%;
+    margin-top: 12px;
+    object-fit: cover;
+    box-shadow: 0px 0px 10px black;
+}
+/* NOMBRE LISTA */
+.nombrePlaylist {
+    font-family: SpotyExtra;
+    font-size: 40px;
+    color: black;
+    margin-top: 28px;
+    margin-left: 110px;
+    position: absolute;
+    text-shadow: 0px 0px 5px #005321;
+    width: 40%;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+/* ?============= */
+
+/* CANCIONES */
+.canciones {
+    background-color: #3d3d3d;
+    border: 2px solid black;
+}
+
+/* TABLA CANCIONES */
+.divTablaCanciones {
+    width: 100%;
+    height: 86%;
+    overflow-y: scroll;
+    border: 2px solid black;
+    border-radius: 0px 0px 25px 0px;
+}
+/* TABLA CANCIONES */
+.tablaCanciones {
+    width: 100%;
+    color: white;
+    border-radius: 0px 0px 25px 0px;
+}
+/* TH */
+.tablaCanciones thead th {
+    height: 30px;
+    color: white;
+    font-family: SpotyReg;
+    font-size: 16px;
+    background-color: #00d856;
+    color: black;
+    /* border: 2px solid black; */
+    border-radius: 25px;
+}
+/* IMAGEN CANCION */
+.imagenCancion {
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    float: left;
+    border-radius: 5px;
+}
+/* TEXTOS */
+.tablaCanciones tbody tr td span {
+    margin-left: 5px;
+    margin-right: 10px;
+    margin-top: 3px;
+    width: 100%;
+    float: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+/* TEXTO NOMBRE */
+.tablaCanciones tbody tr td span.nombreEspecial {
+    width: 80%;
+    margin-left: 10px;
+}
+/* TD */
+.tablaCanciones tbody tr td {
+    max-width: 100px;
+    overflow: hidden;
+    font-family: SpotyLight;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border-radius: 25px;
+    border: 1px solid rgb(156, 156, 156);
+    border-style: outset;
+    align-items: center;
+    height: 40px;
+}
+/* HOVER EN TR */
+.tablaCanciones tbody tr:hover {
+    background-color: #9c9c9c;
+    color: black;
+    font-weight: bold;
+}
+
+/* CELDAS TH Y TD */
+.numeroCancion {
+    width: 5%;
+    text-align: center;
+}
+.nombreCancion {
+    width: 40%;
+    padding-left: 10px;
+}
+.artistaCancion {
+    width: 20%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.albumCancion {
+    width: 20%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.duracionCancion {
+    width: 10%;
+    text-align: center;
+}
+
+/* *NO HAY CANCIONES */
+.noSongs {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    float: left;
+    text-align: center;
+}
+.noSongs h1 {
+    font-family: SpotyExtra;
+    font-size: 40px;
+    color: rgb(156, 156, 156);
+    margin-top: 25%;
+    text-shadow: 0px 0px 5px rgb(71, 71, 71);
+}
+
+/* *===========================GENERALES=========================== */
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background: #3d3d3d;
+    border-left: 2px solid black;
+    border-radius: 0px 0px 25px 0px;
+}
+::-webkit-scrollbar-thumb {
+    background: #00d856;
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #008836;
+}
+
+/* DETAILS Y SUMMARY */
+details {
+    border-top: 0px solid #242424;
+    border-bottom: 2px solid #242424;
+    padding: 0.5em 0.5em 0;
+}
+
+summary {
+    list-style-type: " ";
+    /* list-style-type: "▶️"; */
+    cursor: pointer;
+    margin: -0.5em -0.5em 0;
+    padding: 0.5em;
+    display: none;
+    background-color: rgb(61, 61, 61);
+}
+
+details[open] {
+    padding-left: 10px;
+    padding-right: 0px;
+    background-color: #00d856;
+}
+
+details[open] summary {
+    list-style-type: " ";
+    /* list-style-type: "🔽"; */
+    border-top: 0px solid #242424;
+    border-bottom: 2px solid #242424;
+    margin-bottom: 0px;
+    margin-left: -10px;
+}
+
+.icon {
+    color: #00d856;
+}
+
+/* LOADER */
+.carga {
+    border: 16px solid rgb(156, 156, 156);
+    border-radius: 50%;
+    border-top: 16px solid #00d856;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+}
+.load {
+    height: 10%;
+    width: 100%;
+    text-align: center;
+}
+.load h1 {
+    font-family: SpotyExtra;
+    font-size: 40px;
+    color: rgb(156, 156, 156);
+    /* margin-top: 40px; */
+    margin-top: 20%;
+    text-shadow: 0px 0px 5px rgb(71, 71, 71);
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+    0% {
+        -webkit-transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* MEDIA */
+@media (max-width: 768px) {
+    .listas {
+        height: 83%;
+    }
+    .playlists {
+        height: 300px;
+    }
+    .canciones {
+        height: 660px;
+    }
+    .divTablaCanciones {
+        height: 85%;
+    }
+    .nombrePlaylist {
+        font-size: 20px;
+        margin: auto;
+        max-height: 70px;
+        margin-left: 90px;
+        margin-top: 15px;
+        width: 50%;
+        white-space: unset;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+    .tablaCanciones {
+        width: 700px;
+    }
+    .tablaCanciones tbody tr td {
+        height: 35px;
+    }
+    .tablaCanciones tbody tr td .nombreEspecial {
+        margin: 0px;
+        margin-top: 4px;
+        float: right;
+    }
+    .datosPlaylist {
+        height: 99%;
+    }
+    ::-webkit-scrollbar-track {
+        border-radius: 0px;
+    }
+    .canciones {
+        border-radius: 0px 0px 0px 0px;
+    }
+    .datosPlaylist {
+        border-radius: 0px 0px 0px 0px;
+    }
+    .listas {
+        border-radius: 0px 0px 0px 0px;
+    }
+}
