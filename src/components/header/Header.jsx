@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from 'axios'
 import "./Header.css";
-import { Link, Navigate, NavLink } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { faRightFromBracket } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
