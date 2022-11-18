@@ -23,32 +23,32 @@ export default class Header extends Component {
     }
 
     componentDidMount = () => {
-        this.cambiarSeleccion()
+        // this.cambiarSeleccion()
         this.datosUsuario()
     }
 
     // *CAMBIAR MENU
-    cambiarSeleccion = () => {
-        if(this.props.seleccion === "playlists"){
-            this.setState({
-                seleccionPlaylists:"active col-lg-3 col-md-3 col-6"
-            })
-        }else{
-            this.setState({
-                seleccionPlaylists:"col-lg-3 col-md-3 col-6"
-            })
-        }
+    // cambiarSeleccion = () => {
+    //     if(this.props.seleccion === "playlists"){
+    //         this.setState({
+    //             seleccionPlaylists:"active col-lg-3 col-md-3 col-6"
+    //         })
+    //     }else{
+    //         this.setState({
+    //             seleccionPlaylists:"col-lg-3 col-md-3 col-6"
+    //         })
+    //     }
 
-        if(this.props.seleccion === "estadisticas"){
-            this.setState({
-                seleccionEstadisticas:"active col-lg-3 col-md-3 col-6"
-            })
-        }else{
-            this.setState({
-                seleccionEstadisticas:"col-lg-3 col-md-3 col-6"
-            })
-        }
-    }
+    //     if(this.props.seleccion === "estadisticas"){
+    //         this.setState({
+    //             seleccionEstadisticas:"active col-lg-3 col-md-3 col-6"
+    //         })
+    //     }else{
+    //         this.setState({
+    //             seleccionEstadisticas:"col-lg-3 col-md-3 col-6"
+    //         })
+    //     }
+    // }
 
     // *DATOS DE USUARIO
     datosUsuario = () => {

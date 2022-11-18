@@ -14,7 +14,7 @@ export default class Playlists extends Component {
   // access_token = this.searchParams.get("access_token");
 
   access_token = localStorage.getItem('access_token');
-  nombreUsuario = localStorage.getItem('user_id');
+  // nombreUsuario = localStorage.getItem('user_id');
 
   
 
@@ -30,7 +30,8 @@ export default class Playlists extends Component {
     songsText: [],
     statusSong: false,
     imgP: "",
-    nombreP: ""
+    nombreP: "",
+    nombreUsuario:""
   }
 
   headers = {
@@ -42,46 +43,61 @@ export default class Playlists extends Component {
   componentDidMount = () => {
     
     // console.log("en playlist: "+Global.access_token)
+    this.getNombreUsuario()
     this.getListas()
     
+  }
+
+  getNombreUsuario = () => {
+      axios.get("https://api.spotify.com/v1/me", this.headers).then(response => {
+          const nombre = response.data.id
+          console.log(nombre)
+
+          this.setState({
+              nombreUsuario: nombre,
+          })
+      })
+  
   }
   
   offsetPlaylist = 0;
   getListas = () => {
-    axios.get("https://api.spotify.com/v1/me/playlists?limit=" + Global.playlistLimit + "&offset=" + this.offsetPlaylist + "", this.headers).then(response => {
-      const datos = response.data
-      // console.log(datos);
-      var totalListas = (datos.total)
-      // BUCLE
-      if (this.offsetPlaylist < totalListas) {
-
-        for (var i = 0; i < datos.items.length; i++) {
-          this.state.playlists.push(datos.items[i])
-          if (datos.items[i].public === true) {
-            this.state.playlistsPublicas.push(datos.items[i])
+    if(this.state.nombreUsuario !== ""){
+      axios.get("https://api.spotify.com/v1/me/playlists?limit=" + Global.playlistLimit + "&offset=" + this.offsetPlaylist + "", this.headers).then(response => {
+        const datos = response.data
+        // console.log(datos);
+        var totalListas = (datos.total)
+        // BUCLE
+        if (this.offsetPlaylist < totalListas) {
+  
+          for (var i = 0; i < datos.items.length; i++) {
+            this.state.playlists.push(datos.items[i])
+            if (datos.items[i].public === true) {
+              this.state.playlistsPublicas.push(datos.items[i])
+            }
+            if (datos.items[i].public === false && datos.items[i].owner.display_name === this.state.nombreUsuario){
+              this.state.playlistsPrivadas.push(datos.items[i])
+            }
+            if (datos.items[i].owner.display_name !== this.nombreUsuario){
+              this.state.playlistsSeguidas.push(datos.items[i])
+            }
           }
-          if (datos.items[i].public === false && datos.items[i].owner.display_name === this.nombreUsuario){
-            this.state.playlistsPrivadas.push(datos.items[i])
-          }
-          if (datos.items[i].owner.display_name !== this.nombreUsuario){
-            this.state.playlistsSeguidas.push(datos.items[i])
-          }
+          this.offsetPlaylist += Global.playlistLimit;
+          this.getListas()
+  
         }
-        this.offsetPlaylist += Global.playlistLimit;
-        this.getListas()
-
-      }
-      else {
-        this.setState({
-          playlists: this.state.playlists,
-          playlistsPrivadas: this.state.playlistsPrivadas,
-          playlistsPublicas: this.state.playlistsPublicas,
-          playlistsSeguidas: this.state.playlistsSeguidas,
-          statusPlay: true,
-          totalListas: totalListas,
-        })
-      }
-    })
+        else {
+          this.setState({
+            playlists: this.state.playlists,
+            playlistsPrivadas: this.state.playlistsPrivadas,
+            playlistsPublicas: this.state.playlistsPublicas,
+            playlistsSeguidas: this.state.playlistsSeguidas,
+            statusPlay: true,
+            totalListas: totalListas,
+          })
+        }
+      })
+    }
   }
 
 
