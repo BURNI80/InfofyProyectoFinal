@@ -4,7 +4,6 @@ import axios from "axios";
 import './Playlist.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLock, faLockOpen, faHeart } from '@fortawesome/free-solid-svg-icons'
-import Header from "../header/Header";
 import { Navigate } from "react-router-dom";
 
 
@@ -184,7 +183,6 @@ export default class Playlists extends Component {
 
     return (
       <div>
-        <Header seleccion="playlists" />
         <div className="general">
           <div className="playlists row mx-lg-5 mx-3">
             <div className="datosPlaylist col-sm-12 col-md-3 col-lg-3 p-0">
