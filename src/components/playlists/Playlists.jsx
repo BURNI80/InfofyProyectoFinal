@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLock, faLockOpen, faHeart } from '@fortawesome/free-solid-svg-icons'
 import Header from "../header/Header";
 import { Navigate } from "react-router-dom";
+import { getRefreshedAccesToken } from "../../utils";
 
 
 export default class Playlists extends Component {
@@ -16,7 +17,7 @@ export default class Playlists extends Component {
   access_token = localStorage.getItem('access_token');
   nombreUsuario = localStorage.getItem('user_id');
 
-  
+
 
   state = {
     playlists: [],
@@ -31,7 +32,7 @@ export default class Playlists extends Component {
     statusSong: false,
     imgP: "",
     nombreP: "",
-    nombreUsuario:""
+    nombreUsuario: ""
   }
 
   headers = {
@@ -41,23 +42,23 @@ export default class Playlists extends Component {
   }
 
   componentDidMount = () => {
-    
+
     // console.log("en playlist: "+Global.access_token)
     this.getUsuario()
     this.getListas()
-    
+    getRefreshedAccesToken();
   }
 
   getUsuario = () => {
     axios.get("https://api.spotify.com/v1/me", this.headers).then(response => {
-        const nombre = response.data.id
-        this.setState({
-          nombreUsuario: nombre
-        })
+      const nombre = response.data.id
+      this.setState({
+        nombreUsuario: nombre
+      })
 
     })
-}
-  
+  }
+
   offsetPlaylist = 0;
   getListas = () => {
     axios.get("https://api.spotify.com/v1/me/playlists?limit=" + Global.playlistLimit + "&offset=" + this.offsetPlaylist + "", this.headers).then(response => {
@@ -72,10 +73,10 @@ export default class Playlists extends Component {
           if (datos.items[i].public === true) {
             this.state.playlistsPublicas.push(datos.items[i])
           }
-          if (datos.items[i].public === false && datos.items[i].owner.display_name === this.state.nombreUsuario){
+          if (datos.items[i].public === false && datos.items[i].owner.display_name === this.state.nombreUsuario) {
             this.state.playlistsPrivadas.push(datos.items[i])
           }
-          if (datos.items[i].owner.display_name !== this.nombreUsuario){
+          if (datos.items[i].owner.display_name !== this.nombreUsuario) {
             this.state.playlistsSeguidas.push(datos.items[i])
           }
         }
@@ -106,7 +107,7 @@ export default class Playlists extends Component {
     const total = playlist.tracks.total
 
     this.setState({
-      statusSong:false,
+      statusSong: false,
       statusLoading: true,
     })
 
@@ -189,8 +190,8 @@ export default class Playlists extends Component {
   // *RENDER
   render() {
 
-    if(this.access_token === null){
-      return(<Navigate to="/" />)
+    if (this.access_token === null) {
+      return (<Navigate to="/" />)
     }
 
 
@@ -212,9 +213,9 @@ export default class Playlists extends Component {
                       return (
                         <button key={playlist.id + index} data-plistid={playlist.id} onClick={() => this.getCanciones(playlist)} className="btnPlist">
                           {
-                            (playlist.name === "")?
-                            ("Sin Nombre"):
-                            (playlist.name)
+                            (playlist.name === "") ?
+                              ("Sin Nombre") :
+                              (playlist.name)
                           }
                         </button>
                       )
@@ -228,9 +229,9 @@ export default class Playlists extends Component {
                       return (
                         <button key={playlist.id + index} data-plistid={playlist.id} onClick={() => this.getCanciones(playlist)} className="btnPlist">
                           {
-                            (playlist.name === "")?
-                            ("Sin Nombre"):
-                            (playlist.name)
+                            (playlist.name === "") ?
+                              ("Sin Nombre") :
+                              (playlist.name)
                           }
                         </button>
                       )
@@ -244,9 +245,9 @@ export default class Playlists extends Component {
                       return (
                         <button key={playlist.id + index} data-plistid={playlist.id} onClick={() => this.getCanciones(playlist)} className="btnPlist">
                           {
-                            (playlist.name === "")?
-                            ("Sin Nombre"):
-                            (playlist.name)
+                            (playlist.name === "") ?
+                              ("Sin Nombre") :
+                              (playlist.name)
                           }
                         </button>
                       )
@@ -255,7 +256,7 @@ export default class Playlists extends Component {
                 </details>
               </div>
             </div>
-        
+
             {
               (this.state.statusSong === true) ?
                 (
@@ -299,7 +300,7 @@ export default class Playlists extends Component {
                     </div>
                   )
             }
-        
+
           </div>
         </div>
       </div>

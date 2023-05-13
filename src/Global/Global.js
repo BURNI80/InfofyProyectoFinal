@@ -3,9 +3,9 @@ var Global = {
 	songLimit: 100,
 	access_token: "",
 	refresh_token: "",
-	redirect_uri : "https://infofy-agc.up.railway.app",
-	client_id : "c33ccc8f8e0b4de2ac731fe177912cce",
-	client_secret : "c4fb592872a94a3984bb89fea01e1402",
+	redirect_uri : "http://localhost:3000/",
+	client_id : "ae8a512d82a744399ab3c26d9f3f7032",
+	client_secret : "0d076cf3819a4884842d68cb0b923661",
 	scopes : "user-read-private user-read-email playlist-read-private"
 }
 
